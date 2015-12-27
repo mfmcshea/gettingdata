@@ -1,6 +1,6 @@
 #CODEBOOK.md for Getting and Cleaning Data Course Project#
 ##mfmcshea##
-###Date: December 26, 2015##
+###Date: December 27, 2015##
 
 ##Introduction##
 The purpose of this course project is to demonstrate my ability to collect, work with, and clean a data set... For this project, I am submitting (1) a tidy data set as described below, (2) a link to a Github repository with my script for performing the analysis, and (3) a code book that describes the variables, the data, and any transformations or work that I performed to clean up the data called CodeBook.md.  There is a README.md in the repo with my scripts.  This repo explains how all of the scripts work and how they are connected.
@@ -97,16 +97,16 @@ library(tidyr)
 ```
 ###I use only these files in the UCI HAR Dataset###
 1.  SUBJECT FILES
-* test/subject_test.txt
-* train/subject_train.txt
-2. ACTIVITY FILES
-* test/X_test.txt
-* train/X_train.txt
-3. DATA FILES
-* test/y_test.txt
-* train/y_train.txt
-4. features.txt - Names of column variables in the dataTable
-5. activity_labels.txt - Links the class labels with their activity name.
+  * test/subject_test.txt
+  * train/subject_train.txt
+2.  ACTIVITY FILES
+  * test/X_test.txt
+  * train/X_train.txt
+3.  DATA FILES
+  * test/y_test.txt
+  * train/y_train.txt
+4.  features.txt - Names of column variables in the dataTable
+5.  activity_labels.txt - Links the class labels with their activity name.
 
 ###Read the above files and create data tables.###
 ```
@@ -362,4 +362,4 @@ NULL
 #Send text file to disk
 write.table(dataTable, "TidyData.txt", row.name=FALSE)
 ```
-The tidy data set consists of variables for each activity and subject.  There are 10299 instances broken down by 180 groups (30 subjects and 6 activities) and 66 mean and standard deviation features are averaged for each group.  dataTable has 180 rows and 69 columns.  To break down the columns, there are 33 mean variables, 33 standard deviation variables, 1 subject (1 of the 30 test subjects) + ActivityName + ActivityNum.  The names of each column are represented by the the first of the tidy data set.
+The tidy data set consists of variables for each activity and subject.  There are 10299 instances broken down by 180 groups (30 subjects and 6 activities) and 66 mean and standard deviation features are averaged for each group.  dataTable has 180 rows and 69 columns.  To break down the columns, there are 33 mean variables, 33 standard deviation variables, 1 subject (1 of the 30 test subjects) + ActivityName + ActivityNum.  The names of each column are represented by the the first row of the tidy data set.
