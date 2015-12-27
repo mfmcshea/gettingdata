@@ -362,3 +362,4 @@ NULL
 #Send text file to disk
 write.table(dataTable, "TidyData.txt", row.name=FALSE)
 ```
+The tidy data set consists of variables for each activity and subject.  There are 10299 instances broken down by 180 groups (30 subjects and 6 activities) and 66 mean and standard deviation features are averaged for each group.  dataTable has 180 rows and 69 columns.  To break down the columns, there are 33 mean variables, 33 standard deviation variables, 1 subject (1 of the 30 test subjects) + ActivityName + ActivityNum.  The names of each column are represented by the the first of the tidy data set.

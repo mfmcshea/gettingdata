@@ -15,3 +15,13 @@ This repo contains three files:
 3. uses descriptive activity names to name the activities in the data set; 
 4. appropriately labels the data set with descriptive variable names; and
 5. from the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+\* Outside Sources consulted in carrying out the project:
+
+1. [Getting and Cleaning Data Course Project](https://rstudio-pubs-static.s3.amazonaws.com/37290_8e5a126a3a044b95881ae8df530da583.html)
+
+2. Rob Knell's [Introductory R Markdown: dynamic documents and reproducible research for beginners](http://www.introductoryr.co.uk/Reproducibility/Markdown_guide.html)
+
+3. John Schroeder's Codebook [CODEBOOK.md](https://rpubs.com/Jb_2823/55939)
+
+

@@ -1,11 +1,11 @@
 #Program Name: run_analysis.R
 #Name: mfmcshea
 #Date of First Draft: December 21, 2015, 9:57PM
-#Revisions on Final Draft: December 26, 4:14PM
+#Revisions on Final Draft: December 26, 8:52PM
 #Purpose: To complete Getting Data Course Project
 
 #Set working directory
-setwd ("C:/Users/McShea/Desktop/DataScience/GettingData/")
+setwd ("C:/Users/McShea/Desktop/DataScience/GettingandCleaningData/")
 
 #The following downloads the data onto my computer
 if(!file.exists("./projectdata")) {
@@ -26,7 +26,7 @@ library(data.table)
 #install.packages("tidyr")
 library(tidyr)
 
-AllFilesPath <-"C:/Users/McShea/Desktop/DataScience/GettingData/projectdata/UCI HAR Dataset"
+AllFilesPath <-"C:/Users/McShea/Desktop/DataScience/GettingandCleaningData/projectdata/UCI HAR Dataset"
 
 #Read Subject Files
 dataSubjectTrain <-tbl_df(read.table(file.path(AllFilesPath, "train", "subject_train.txt")))
@@ -125,7 +125,7 @@ names(dataTable) <-gsub("BodyBody", "Body", names(dataTable))
 head(str(dataTable), 6)
 
 #ITEM 5
-#From step 4 data, create a second, independent tidy data set w/ aveg of each variable for each activity and each subject
+#From step 4 data, create a second, independent tidy data set w/ aveg of each variable for #each activity and each subject.
 
 #Send text file to disk
 write.table(dataTable, "TidyData.txt", row.name=FALSE)
@@ -133,6 +133,7 @@ write.table(dataTable, "TidyData.txt", row.name=FALSE)
 #What are the characteristics of TidyData.txt?
 whatisintxt<-read.table("TidyData.txt", header=TRUE)
 head(str(whatisintxt), 2)
+#view(whatisintxt)
 
 #Text file has 180 obs of 69 variables.
 
